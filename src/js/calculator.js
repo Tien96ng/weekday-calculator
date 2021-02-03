@@ -1,13 +1,17 @@
-export function getDate(input) {
+export function validDateChecker(input) {
   let inputDate = new Date(Date.parse(input));
-  return inputDate.toString().slice(0, 3);
+  if(isNaN(inputDate.getHours())) {
+    return false;
+  } else {
+    return true;
+  }
 }
 
-export function validDateChecker(input) {
-  let inputDate = new Date(Date.parse(input)); // Andrew = NaN
-  if(isNaN(inputDate.getHours())) {
-    return "Please Enter in a valid Date!";
+export function getDate(input) {
+  if(validDateChecker(input)) {
+    let inputDate = new Date(Date.parse(input));
+    return inputDate.toString().slice(0, 3);
   } else {
-    return "Date is Valid.";
+    return "Invalid Date Entered."
   }
 }
