@@ -8,7 +8,7 @@ describe("weekdayCalculator", () => {
   });
 
   test("Should return day of the given date in the future.", () => {
-    expect(weekdayCalculator("01/01/2022")).toEqual("Fri");
+    expect(weekdayCalculator("01/01/2022")).toEqual("Sat");
   });
 
 
