@@ -4,14 +4,18 @@
   <title>Weekday Calculator</title>
 </head>
 <body>
-  <form id="form">
-    <label for="date">Enter a Date: </label>
-    <input type="text" name="date" id="date" required>
+  <div class="container">
+    <form id="form">
+      <label for="date">Enter a Date: </label>
+      <input type="text" name="date" id="date" required>
+  
+      <button type="submit" value="Submit" class="btn btn-success">Submit</button>
+    </form>
+  </div>
 
-    <button type="submit" value="Submit">Submit</button>
-  </form>
-
-
-  <div id="output"></div>
+  <div id="output" class="container">
+    <p id="invalid-message">Please Enter a Valid Date!</p>
+    <p id="day"></p>
+  </div>
 </body>
 </html>
